@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "b1ea4ca7-b323-4dff-af65-d74bf29e7618",
+		"name": "Music",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "QQ-搜索",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://y.qq.com",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"req\": {\n        \"method\": \"DoSearchForQQMusicDesktop\",\n        \"module\": \"music.search.SearchCgiService\",\n        \"param\": {\n            \"query\": \"完美生活\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+					"protocol": "https",
+					"host": [
+						"u",
+						"y",
+						"qq",
+						"com"
+					],
+					"path": [
+						"cgi-bin",
+						"musicu.fcg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QQ-歌曲信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "uin=x; qm_keyst=x;",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"req\": {\n        \"module\": \"vkey.GetVkeyServer\",\n        \"method\": \"CgiGetVkey\",\n        \"param\": {\n            \"filename\": [\n                \"M500001gFmS32mSRvn001gFmS32mSRvn.mp3\"\n            ],\n            \"guid\": \"6227871\",\n            \"songmid\": [\n                \"001gFmS32mSRvn\"\n            ],\n            \"platform\": \"20\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://u.y.qq.com/cgi-bin/musicu.fcg",
+					"protocol": "https",
+					"host": [
+						"u",
+						"y",
+						"qq",
+						"com"
+					],
+					"path": [
+						"cgi-bin",
+						"musicu.fcg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "网易云-搜索",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "params=e5%2F0bJFeM9IzL8emYEledfVgLQN14DpNQ5NOnhvTmh8Kz8myQOtu%2BDYVqz0rPg8rL8RwbqYlEJ%2F2rudZZeH2TpGNJJao1p3LV8Nlz%2BZh4G%2FPZe4Wmgg%2BtaKqKakKrBIH&encSecKey=de93120acef8902c20642f4fcbbfd137c637ddd49a5ef040aebf11b56eedf29162128e61e0d071f10c585b3b2742c99682fc045e5202e90fbd93f6806eb6f9afdd03d689288f4d365ecf4df3014f58c570c7f85ab2ae58ecd631f3f35719c4d425b103c882f2eb0565609afcdb8e04def6accec3f0732e132235877f76fb92ca",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://music.163.com/weapi/search/get",
+					"protocol": "https",
+					"host": [
+						"music",
+						"163",
+						"com"
+					],
+					"path": [
+						"weapi",
+						"search",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "网易云-歌单",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "id=970642966"
+				},
+				"url": {
+					"raw": "https://music.163.com/api/v6/playlist/detail",
+					"protocol": "https",
+					"host": [
+						"music",
+						"163",
+						"com"
+					],
+					"path": [
+						"api",
+						"v6",
+						"playlist",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "网易云-批量",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "params=0yGHZIFxOMyNc%2FCpOi%2B7PsIpEI5AI%2BrvqRExrQ4O7S%2FvUvXHEmj8TrimaHEITxIS&encSecKey=5b3db4a3db661c10dc6d1a3358f5cc9a009da7b6bf61e4f61a3aa98b193fcd0e1c423b9d0ff6ee45b1dc94e961af1173d2165473ea578009486eb03b56e41f9a5cf2c80f9faa3992a252c20b8c6481c552eea1ad17b7b303179db82aea41f4f073fe18d5c53318383b51d2e139bd16471d6e4049c01c4ccfd34fedc47a60404a\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://music.163.com/weapi/v3/song/detail",
+					"protocol": "https",
+					"host": [
+						"music",
+						"163",
+						"com"
+					],
+					"path": [
+						"weapi",
+						"v3",
+						"song",
+						"detail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "咪咕-搜索",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://m.music.migu.cn/v3",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://m.music.migu.cn/migu/remoting/scr_search_tag?keyword=xx&pgc=1&rows=20&type=2",
+					"protocol": "https",
+					"host": [
+						"m",
+						"music",
+						"migu",
+						"cn"
+					],
+					"path": [
+						"migu",
+						"remoting",
+						"scr_search_tag"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "xx"
+						},
+						{
+							"key": "pgc",
+							"value": "1"
+						},
+						{
+							"key": "rows",
+							"value": "20"
+						},
+						{
+							"key": "type",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "咪咕-歌曲信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://m.music.migu.cn/v3",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://m.music.migu.cn/migu/remoting/cms_detail_tag?cpid=60084641764",
+					"protocol": "https",
+					"host": [
+						"m",
+						"music",
+						"migu",
+						"cn"
+					],
+					"path": [
+						"migu",
+						"remoting",
+						"cms_detail_tag"
+					],
+					"query": [
+						{
+							"key": "cpid",
+							"value": "60084641764"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "酷我-搜索",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "csrf",
+						"value": "3E7JFQ7MRPL",
+						"type": "default"
+					},
+					{
+						"key": "Referer",
+						"value": "https://kuwo.cn",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "Hm_lvt_cdb524f42f0ce19b169a8071123a4797=1623339177,1623339183; _ga=GA1.2.1195980605.1579367081; Hm_lpvt_cdb524f42f0ce19b169a8071123a4797=1623339982; kw_token=3E7JFQ7MRPL; _gid=GA1.2.747985028.1623339179; _gat=1",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://kuwo.cn/api/www/search/searchMusicBykeyWord?key=xx&pn=1&rn=30",
+					"protocol": "https",
+					"host": [
+						"kuwo",
+						"cn"
+					],
+					"path": [
+						"api",
+						"www",
+						"search",
+						"searchMusicBykeyWord"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "xx"
+						},
+						{
+							"key": "pn",
+							"value": "1"
+						},
+						{
+							"key": "rn",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "酷我-歌曲信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "csrf",
+						"value": "3E7JFQ7MRPL",
+						"type": "default"
+					},
+					{
+						"key": "Referer",
+						"value": "https://kuwo.cn",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "Hm_lvt_cdb524f42f0ce19b169a8071123a4797=1623339177,1623339183; _ga=GA1.2.1195980605.1579367081; Hm_lpvt_cdb524f42f0ce19b169a8071123a4797=1623339982; kw_token=3E7JFQ7MRPL; _gid=GA1.2.747985028.1623339179; _gat=1",
+						"type": "default"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip,deflate",
+						"type": "default"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "zh-CN,zh;q=0.8,gl;q=0.6,zh-TW;q=0.4",
+						"type": "default"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://www.kuwo.cn/api/www/music/musicInfo?mid=245840404",
+					"protocol": "https",
+					"host": [
+						"www",
+						"kuwo",
+						"cn"
+					],
+					"path": [
+						"api",
+						"www",
+						"music",
+						"musicInfo"
+					],
+					"query": [
+						{
+							"key": "mid",
+							"value": "245840404"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "酷我-歌曲链接",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "csrf",
+						"value": "3E7JFQ7MRPL",
+						"type": "default"
+					},
+					{
+						"key": "Referer",
+						"value": "https://kuwo.cn",
+						"type": "default"
+					},
+					{
+						"key": "Cookie",
+						"value": "Hm_lvt_cdb524f42f0ce19b169a8071123a4797=1623339177,1623339183; _ga=GA1.2.1195980605.1579367081; Hm_lpvt_cdb524f42f0ce19b169a8071123a4797=1623339982; kw_token=3E7JFQ7MRPL; _gid=GA1.2.747985028.1623339179; _gat=1",
+						"type": "default"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip,deflate",
+						"type": "default"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "zh-CN,zh;q=0.8,gl;q=0.6,zh-TW;q=0.4",
+						"type": "default"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://www.kuwo.cn/api/v1/www/music/playUrl?mid=245840404",
+					"protocol": "https",
+					"host": [
+						"www",
+						"kuwo",
+						"cn"
+					],
+					"path": [
+						"api",
+						"v1",
+						"www",
+						"music",
+						"playUrl"
+					],
+					"query": [
+						{
+							"key": "mid",
+							"value": "245840404"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "酷狗-搜索",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://www.kugou.com/",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://complexsearch.kugou.com/v2/search/song?keyword=薛之谦&signature=5d22e54bdcd4be645bd84a9a55b11925&srcappid=2919&clientver=2000&mid=-&userid=-1&dfid=-&page=1&pagesize=30",
+					"protocol": "https",
+					"host": [
+						"complexsearch",
+						"kugou",
+						"com"
+					],
+					"path": [
+						"v2",
+						"search",
+						"song"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "薛之谦"
+						},
+						{
+							"key": "signature",
+							"value": "5d22e54bdcd4be645bd84a9a55b11925"
+						},
+						{
+							"key": "srcappid",
+							"value": "2919"
+						},
+						{
+							"key": "clientver",
+							"value": "2000"
+						},
+						{
+							"key": "mid",
+							"value": "-"
+						},
+						{
+							"key": "userid",
+							"value": "-1"
+						},
+						{
+							"key": "dfid",
+							"value": "-"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "酷狗-歌曲信息",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://wwwapi.kugou.com/yy/index.php?r=play/getdata&hash=1AF3DA48187C61B2581AF8187D4470C0&album_id=38976234&mid=-",
+					"protocol": "https",
+					"host": [
+						"wwwapi",
+						"kugou",
+						"com"
+					],
+					"path": [
+						"yy",
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "r",
+							"value": "play/getdata"
+						},
+						{
+							"key": "hash",
+							"value": "1AF3DA48187C61B2581AF8187D4470C0"
+						},
+						{
+							"key": "album_id",
+							"value": "38976234"
+						},
+						{
+							"key": "mid",
+							"value": "-"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FREE-搜索",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"YQD\",\n    \"text\": \"薛之谦\",\n    \"page\": 1,\n    \"v\": \"beta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test.quanjian.com.cn/m/api/search",
+					"protocol": "https",
+					"host": [
+						"test",
+						"quanjian",
+						"com",
+						"cn"
+					],
+					"path": [
+						"m",
+						"api",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FREE-歌曲链接",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://test.quanjian.com.cn/m/api/link/index/id/m3f63OtUGNZoMDio1KqpVvTM7k5zLcfouKyjw2Vc7dWSL0qLZFeLha7Yr3R7IdZo/quality/128",
+					"protocol": "https",
+					"host": [
+						"test",
+						"quanjian",
+						"com",
+						"cn"
+					],
+					"path": [
+						"m",
+						"api",
+						"link",
+						"index",
+						"id",
+						"m3f63OtUGNZoMDio1KqpVvTM7k5zLcfouKyjw2Vc7dWSL0qLZFeLha7Yr3R7IdZo",
+						"quality",
+						"128"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
