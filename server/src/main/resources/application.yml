@@ -1,8 +1,10 @@
+server:
+    port: 16300
 spring:
-  data:
-    mongodb:
-      host: 192.168.1.3
-      port: 27017
-      database: music
+    data:
+        mongodb:
+            host: 192.168.1.3
+            port: 27017
+            database: music
 app:
-  save-path: '/music'
+    save-path: '/media/passport/share/music'

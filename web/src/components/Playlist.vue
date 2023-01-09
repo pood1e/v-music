@@ -1,6 +1,6 @@
 <template>
   <el-row align="middle" justify="end">
-    <el-button size="large" type="primary" circle :icon="Location()" @click="locate"/>
+    <el-button v-show="player.hasSong" size="large" type="primary" circle :icon="Location()" @click="locate"/>
   </el-row>
   <el-table :data="songs" :show-header="false" stripe style="width: 100%; margin-top: 10px" @row-dblclick="playRow">
     <el-table-column width="100">

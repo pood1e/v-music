@@ -20,6 +20,19 @@ export const playingStore = defineStore('playing', {
                 console.log(e)
                 this.next()
             })
+            navigator.mediaSession.setActionHandler(
+                'nexttrack',
+                () => {
+                    this.next()
+                }
+            );
+            navigator.mediaSession.setActionHandler(
+                'previoustrack',
+                () => {
+                    this.next()
+                }
+            );
+            navigator.mediaSession.metadata = new MediaMetadata()
         },
         next() {
             if (this.playlist) {
@@ -45,6 +58,9 @@ export const playingStore = defineStore('playing', {
                 cover: song['cover']
             })
             this.player.list.switch(0)
+            navigator.mediaSession.metadata.title = song.name
+            navigator.mediaSession.metadata.artist = song['authors'].join(',')
+            navigator.mediaSession.metadata.artwork = [{src: song['cover']}]
             this.player.on('canplay', () => {
                 this.player.play()
             })
@@ -53,6 +69,9 @@ export const playingStore = defineStore('playing', {
     getters: {
         hasSong(state) {
             return state.player && state.player.list.audios.length > 0
+        },
+        hasPlaylist(state) {
+            return state.playlist && state.playlist.length > 0
         },
         getIndex(state) {
             if (!state.playlist || !state.player || !state.playId) {

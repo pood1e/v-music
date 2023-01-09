@@ -42,7 +42,6 @@ export default {
     },
     changeIndex(index) {
       this.index = index
-      console.log(index)
       if (index.indexOf('playlist') >= 0) {
         this.$emit('menu', 'playlist')
         this.$emit('pid', index.split("-")[1])

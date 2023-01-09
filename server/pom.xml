@@ -59,27 +59,6 @@
                 <artifactId>native-maven-plugin</artifactId>
                 <configuration>
                     <mainClass>me.pood1e.vmusic.server.ServerApplication</mainClass>
-                    <buildArgs>
-                        --initialize-at-run-time=io.netty.channel.AbstractChannel
-                        --initialize-at-build-time=ch.qos.logback.classic.Logger
-                        --trace-class-initialization=org.slf4j.LoggerFactory
-                        --trace-object-instantiation=ch.qos.logback.classic.Logger
-                        --trace-class-initialization=ch.qos.logback.classic.Level
-                        --trace-class-initialization=org.slf4j.MDC
-                        --trace-class-initialization=ch.qos.logback.core.status.StatusBase,ch.qos.logback.core.status.InfoStatus,ch.qos.logback.core.CoreConstants
-<!--                        &#45;&#45;initialize-at-build-time=org.slf4j.impl.StaticLoggerBinder-->
-<!--                        &#45;&#45;initialize-at-build-time=org.slf4j.LoggerFactory-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.classic.Logger-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.core.spi.AppenderAttachableImpl-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.core.status.StatusBase-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.classic.Level-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.core.status.InfoStatus-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.classic.PatternLayout-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.core.CoreConstants-->
-<!--                        &#45;&#45;initialize-at-build-time=org.slf4j.MDC-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.core.util.StatusPrinter-->
-<!--                        &#45;&#45;initialize-at-build-time=ch.qos.logback.core.util.Loader-->
-                    </buildArgs>
                 </configuration>
             </plugin>
             <plugin>
