@@ -121,7 +121,7 @@ curl --location --request POST 'https://music.163.com/api/v6/playlist/detail' \
 ```
 
 ```shell
-curl --location --request POST 'https://music.163.com/weapi/v3/song/detail' \
+curl --location --request POST 'https://music.163.com/weapi/v3/defaultSong/detail' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-raw 'params=0yGHZIFxOMyNc%2FCpOi%2B7PsIpEI5AI%2BrvqRExrQ4O7S%2FvUvXHEmj8TrimaHEITxIS&encSecKey=5b3db4a3db661c10dc6d1a3358f5cc9a009da7b6bf61e4f61a3aa98b193fcd0e1c423b9d0ff6ee45b1dc94e961af1173d2165473ea578009486eb03b56e41f9a5cf2c80f9faa3992a252c20b8c6481c552eea1ad17b7b303179db82aea41f4f073fe18d5c53318383b51d2e139bd16471d6e4049c01c4ccfd34fedc47a60404a
 '
